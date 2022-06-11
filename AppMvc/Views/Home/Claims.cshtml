@@ -1,0 +1,7 @@
+﻿@using System.Security.Claims
+
+@foreach (var claim in User.Claims.ToList())
+{
+    <p>@claim.Type : @claim.Value</p>
+}
+<div>Компания: @User.FindFirst(x => x.Type == "Company").Value</div>

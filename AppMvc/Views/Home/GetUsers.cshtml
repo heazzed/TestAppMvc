@@ -1,0 +1,11 @@
+﻿@using AppMvc.DataBase
+@model IEnumerable<User>
+
+<div class="text-center">
+    @foreach (var user in Model)
+    {
+        <div>
+            @($"Id = {user.Id}, Name = {user.Name}, Email = {user.Email}");
+        </div>
+    }
+</div>
